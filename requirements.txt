@@ -1,0 +1,2 @@
+python-dotenv>=0.10.1
+paho-mqtt>=1.4.0
