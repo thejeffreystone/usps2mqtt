@@ -64,6 +64,6 @@ You will want to automate the execution via cron, pm2, supervisor, or the like.
 
 Next you just have to setup some sensors. 
 
-For an exmaple see my [usps package](https://github.com/thejeffreystone/home-assistant-configuration/blob/master/config/packages/usps.yaml).  
+For an example see my [usps package](https://github.com/thejeffreystone/home-assistant-configuration/blob/master/config/packages/usps.yaml).  
  
 
