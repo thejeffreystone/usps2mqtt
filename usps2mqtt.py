@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 
-"""
-Make sure you change the parameters - username, password, mailbox,
-paths and options.
-"""
-
 import email
 import datetime, imaplib, re, sys
 import os
