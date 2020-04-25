@@ -2,6 +2,8 @@
 
 usps2mqtt is a simple way to integrate USPS Informaed Delivery with Home Assistant. 
 
+I did a video on this setup over on [youtube](https://www.youtube.com/watch?v=TjVeoAKn-r0)
+
 This is a repackaged version of [USPS Mail Integration with Home Assistant](https://blog.kalavala.net/usps/homeassistant/mqtt/2018/01/12/usps.html) that can be deployed on any host with python 3 and access to your Home Assistant MQTT server. 
 
 The script logs into your email, finds the email from USPS Informed Delivery, gets the count of mail and packages along with photos and then published the results to your MQTT Server.  
