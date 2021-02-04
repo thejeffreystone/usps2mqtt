@@ -62,7 +62,7 @@ def get_mails(account):
     image_count = 0
 
     rv, data = account.search ( None, 
-                              '(FROM "USPS" SUBJECT "Informed Delivery Daily Digest" SINCE "' + 
+                              '(FROM "USPS" SUBJECT "Your Daily Digest for " SINCE "' + 
                               today + '")')
     if rv == 'OK':
         for num in data[0].split():
