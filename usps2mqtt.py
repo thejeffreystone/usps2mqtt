@@ -30,7 +30,7 @@ USERNAME = os.getenv("USERNAME")
 PASSWORD = os.getenv("PASSWORD")
 folder   = 'inbox'
 
-GIF_FILE_NAME = "todays_mails.gif"
+GIF_FILE_NAME = "todays_mail.gif"
 GIF_MAKER_OPTIONS = '/usr/bin/convert  -delay 300 -loop 0 '
 IMAGE_OUTPUT_PATH = os.getenv("IMAGE_OUTPUT_PATH")
 
@@ -188,7 +188,12 @@ try:
         # so that the next day, you don't see yesterday's mails
         # when there are no mails, copy nomail.jpg as your default file
         if mc == 0:
-            os.remove(IMAGE_OUTPUT_PATH + GIF_FILE_NAME)
+            try:
+                os.remove(IMAGE_OUTPUT_PATH + GIF_FILE_NAME)
+            except Exception as ex:
+                print_message ("Unable to remove {}".format(GIF_FILE_NAME))
+                print_message (str(ex))
+                
             copyfile("nomail.gif", IMAGE_OUTPUT_PATH + GIF_FILE_NAME)
 
         # disconnect from MQTT
